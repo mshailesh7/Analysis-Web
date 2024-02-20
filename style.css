@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root{
+    --var-primary-color: #2888E8FF;
+}
+body{
+    line-height: 1.6;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+h1,h2,h3,h4{
+    font-family: "Josefin Sans", sans-serif;
+}
+
+h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+p{
+    font-family: "Rubik", sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.08rem;
+}
+
+button, input[type="submit"] {
+    background-color: var(--var-primary-color);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.registration-header{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("./assets//trees3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.5rem); 
+    height: 10vh;
+    width: 90%;
+    margin: auto ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 3.4rem;
+    font-weight: bolder;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+img {
+    height: 6rem;
+    display: inline-block; 
+    vertical-align: middle; 
+}
+
+ul{
+    margin-left: 50rem;
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    font-size: 2rem;
+    font-weight: 600;  
+}
+li:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--var-primary-color);
+    text-underline-offset: 7px;
+}
+li>a{
+    color: #fff;
+    text-decoration: none;
+}
+ul li:last-child a {
+    color: #90d183;
+}
+/* registration page styling */
+.index-main{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+.registration, .login{
+    min-height: 30rem;
+    min-width: 40vw;
+}
+.grid-two--column{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.form-text{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url("./assets//login.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 13rem 12rem; 
+}
+.login .form-text{
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("./assets//register.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.form-text p{
+    width: 35ch;
+    text-align: center;
+    margin: 2rem 0 3rem 0;
+}
+
+.form-text button{
+    background-color: #fff;
+    color: black;
+}
+.form-text button:hover{
+    background-color: transparent;
+    color: #fff;
+}
+.registration-form,.login-form{
+    width: 100%;
+    min-height: 45vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.registration-form p, .login-form p{
+    margin: 1rem 0 .7rem 0;
+}
+.social-icons{
+    display: flex;
+    gap: 2.4rem;
+    margin: 1rem 0 .6rem 0;
+}
+
+.fa-brands{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 0.1rem solid #ccc;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.6rem;
+}
+
+input{
+    width: 30rem;
+    margin: .7rem 0;
+    border: none;
+    background-color:#e8e8e8 ;
+    padding: 1rem 1.8rem;
+    letter-spacing: .06rem;
+}
+input[type="submit"]{
+    margin-top: 2rem;
+    min-width: 10rem;
+    background-color: var(--var-primary-color);
+    color: #fff;
+}
+.registration:not(.login-section--display){
+    display: none;
+}
+.login-section--display .registration{
+    display: block;
+}
+.login-section--display .login{
+    display: none;
+}
+
+/* features page styling */
+.carousel {
+    position: relative;
+    max-width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+}
+
+.slide {
+    min-width: 100%;
+    transition: 1.0s ease;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+.description h1{
+    color: #90d183;
+    font-size: 3.5rem;
+}
+.description {
+    letter-spacing: .2rem;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: .5rem;
+    text-align: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1.1rem;
+    z-index: 100;
+}
+
+.prev {
+    left: 1.1rem;
+}
+
+.next {
+    right: 1.1rem;
+}
+
+.features-header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #ffffff;
+    font-size: 5rem;
+    font-weight: bolder;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.features-header h1 {
+    margin: 0;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    transition: all 0.3s ease;
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    font-family: "Rubik", sans-serif;
+    background-color: #245e27;
+    color: white;
+    padding: 0.9375rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3rem;
+    margin: 0.25rem 0.125rem;
+    cursor: pointer;
+}
+.features-header button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    background-color: #367e38;
+}
+
+/* upload file styling */
+.upload-main{
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.uploadcontainer {
+    margin-top: 5rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(0.5rem); 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+.uploadcontainer h1{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+.custom-select, .custom-file-upload {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.custom-select:before, .custom-file-upload:before {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+    content: attr(data-placeholder);
+    position: absolute;
+    top: .5rem;
+    left: 4.5rem;
+    right: 3.5rem;
+    bottom: 0;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 15px;
+    pointer-events: none;
+}
+.custom-select select, .custom-file-upload input[type=file] {
+    position: relative;
+    width: calc(100% - 20px);
+    margin: .5rem;
+    padding: 10px 15px;
+    line-height: 1.5;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 42px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 0;
+    z-index: 1;
+}
+.custom-select:after, .custom-file-upload:after {
+    content: '\25BC';
+    position: absolute;
+    top: .5rem;
+    right: 10px;
+    bottom: 0;
+    background: #eee;
+    padding: 10px;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+.upload-button {
+    font-family: "Rubik", sans-serif;
+    background-color: #245e27;
+    color: white;
+    padding: 0.9375rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 3rem;
+    margin: 0.25rem auto;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+}
+.upload-button:hover {
+    background: #45a049;
+}
+.summary {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.analysis-options label {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 2.3rem;
+    color: #fff;
+    display: flex;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.analysis-options input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+}
+.analysis-summary {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
